@@ -1,7 +1,111 @@
+@import fonts
+@import animations
+
+$primary: #64B5C5
+$dark: #282828
+$light: #A3A2A2
+$accent: #255C8E
+$background: #eeeded
+
+$dark-blue: #0a192fd9
+$lighter-blue: rgb(23, 42, 69)
+$neon-green: rgb(100, 255, 218)
+$navy: #0a192f
+$light-navy: #172a45
+$lightest-navy: #303C55
+$even-lightest-navy: #303c5565
+$slate: #8892b0
+$light-slate: #a8b2d1
+$lightest-slate: #ccd6f6
+$white: #e6f1ff
+$green: #64ffda
+$dark-green: #46af97
+
+
 #root
-  min-height: 100vh
-  min-width: 100vw
-  position: absolute
-  top: 0
+  font-family: 'Open Sans', sans-serif
+  background-color: $navy
+  color: $light-slate
+  .btn
+    &:hover
+      opacity: 0.8
   .container
-    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    min-height: 100vh
+    padding: 10px 20px
+    .header
+      text-align: center
+      margin-bottom: 100px
+      .title
+        color: $lightest-slate
+        font-weight: 800
+      .subtitle-container
+        display: flex
+        font-size: 1.25rem
+        .subtitle
+          margin: 0 4px
+        .website-link
+          text-decoration: none
+          margin: 0 4px
+          width: fit-content
+          a
+            text-decoration: none
+            color: $green
+            &:hover
+              color: $green
+    .date-form
+      .btn
+        border: 0
+        &.btn-primary
+          background-color: $lightest-navy
+          &:focus
+            box-shadow: 0 0 0 0.2rem $even-lightest-navy !important
+        &.btn-success
+          background-color: $dark-green
+      label
+        margin: 1rem .5rem 1rem 0
+      .react-datepicker-wrapper
+        input
+          background-color: $light-slate
+          border-radius: 6px
+          border-width: 0
+          color: $dark
+      .react-datepicker__month-container
+        background-color: $white !important
+        .react-datepicker__header
+          background-color: $lightest-slate !important
+        .react-datepicker__month
+          background-color: $white !important
+      .react-datepicker__day:hover, .react-datepicker__month-text:hover, .react-datepicker__quarter-text:hover, .react-datepicker__year-text:hover
+        background-color: $lightest-navy
+        color: white
+      .react-datepicker__navigation--next
+        border-left-color: $navy !important
+      .react-datepicker__navigation--previous
+        border-right-color: $navy !important
+      .col
+        flex: 1 1 0
+      .table
+        border-radius: 10px !important
+        overflow: hidden
+        &.table-striped
+          .thead-dark
+            tr
+              th
+                border-top: none !important
+                background-color: $light-navy
+                color: $lightest-slate
+                border-color: $light-slate
+                border-bottom-width: 0.5px
+          tbody
+            tr
+              td
+                border-color: $slate
+                background-color: $lightest-navy
+                color: $lightest-slate
+                .btn
+                  &.btn-danger
+                    background-color: #DE001C

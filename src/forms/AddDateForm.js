@@ -18,8 +18,8 @@ const AddDateForm = (props) => {
       }}
     >
       <div className="row">
-        <div className="form-group col-sm-6 d-flex">
-          <label class="mr-1 font-weight-bold text-nowrap">Start Date</label>
+        <div className="form-group col-sm-6">
+          <label>Start Date</label>
           <DatePicker
             name="start_date"
             selected={date.start_date}
@@ -29,8 +29,8 @@ const AddDateForm = (props) => {
             endDate={date.end_date}
           />
         </div>
-        <div className="form-group col-sm-6 d-flex">
-          <label class="mr-1 font-weight-bold text-nowrap">End Date</label>
+        <div className="form-group col-sm-6">
+          <label>End Date</label>
           <DatePicker
             name="end_date"
             selected={date.end_date}

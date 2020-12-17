@@ -17,10 +17,18 @@ const App = () => {
     
   return (
     <div className="container">
-      <h1 className="my-3 title">Date Range List</h1>
-      <div className="row">
+      <div className="header">
+        <h1 className="my-3 title">Date Range Selector</h1>
+        <div className="subtitle-container">
+          <div className="subtitle">Created by Noah Lozevski → </div>
+          <div className="website-link hvr-underline-from-center">
+            <a href="https://noah.lozev.ski" target="_blank" rel="noreferrer">website</a>
+          </div>
+        </div>
+      </div>
+      <div className="row date-form">
         <div className="col">
-          <h3 className="my-2">Add Date Range</h3>
+          <h3 className="my-2">Add a Date Range</h3>
           <AddDateForm addDate={addDate} />
         </div>
         <div className="col">
