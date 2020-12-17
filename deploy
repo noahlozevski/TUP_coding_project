@@ -1,0 +1,22 @@
+#!/usr/local/bin/fish
+
+echo "building static site"
+yarn build
+echo "done building site"
+
+echo "deploy stack"
+aws cloudformation deploy --template-file cf_template.yml --stack-name tupcodingchallenge --capabilities CAPABILITY_IAM 
+echo "done deploying stack"
+
+echo "clearing out s3 bucket"
+aws s3 rm s3://tupcodingchallenge --recursive
+echo "done clearing bucket"
+
+echo "uploading files to s3"
+aws s3 cp ./build s3://tupcodingchallenge/ --recursive
+echo "done uploading to s3"
+
+echo "removing cached files"
+rm -rf ./build
+echo "complete"
+

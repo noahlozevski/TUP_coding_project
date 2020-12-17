@@ -1,3 +1,24 @@
+Run `yarn install && yarn start` to run dev server of react project
+Run `python ./python/solution.py` for the python portion
+
+I was a bit confused from the test case for the python question but it was straightforward regardless. \
+Would have been faster with regex though.
+
+The react app was simple and i tried to make it look pretty, let me know what you think. \
+its deployed on s3 and cloudfront as a static site with cloudformation (see the cf_template.yml). \
+im happy to talk about anything regarding the implementation on the phone or a call.
+
+site url:
+https://tup-challenge.lozev.ski/
+^ use that
+
+https://d1uc4t4269ylf4.cloudfront.net/
+http://tupcodingchallenge.s3-website-us-west-2.amazonaws.com/
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
